@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Email Confirmed — VresParea</title>
+<meta name="description" content="Your VresParea account has been confirmed. Open the app to start playing."/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    "surface": "#060e20",
+                    "primary-fixed": "#6bff8f",
+                    "surface-bright": "#1f2b49",
+                    "on-tertiary-container": "#005458",
+                    "on-secondary-fixed-variant": "#525c6c",
+                    "tertiary-fixed": "#17eefa",
+                    "on-tertiary": "#005d62",
+                    "on-primary-fixed": "#004a1d",
+                    "surface-container": "#0f1930",
+                    "tertiary-container": "#17eefa",
+                    "primary-dim": "#5bf083",
+                    "on-secondary-fixed": "#36404f",
+                    "inverse-on-surface": "#4d556b",
+                    "surface-container-high": "#141f38",
+                    "outline-variant": "#40485d",
+                    "primary-fixed-dim": "#5bf083",
+                    "on-error-container": "#ffd2c8",
+                    "on-primary": "#005f28",
+                    "on-surface": "#dee5ff",
+                    "surface-container-lowest": "#000000",
+                    "inverse-primary": "#006e2f",
+                    "on-surface-variant": "#a3aac4",
+                    "on-background": "#dee5ff",
+                    "on-primary-fixed-variant": "#006a2d",
+                    "on-primary-container": "#002c0f",
+                    "surface-tint": "#6bff8f",
+                    "surface-container-highest": "#192540",
+                    "on-secondary": "#485262",
+                    "error": "#ff7351",
+                    "error-dim": "#d53d18",
+                    "surface-container-low": "#091328",
+                    "on-error": "#450900",
+                    "on-tertiary-fixed-variant": "#005e63",
+                    "tertiary-dim": "#00deea",
+                    "secondary-container": "#3d4756",
+                    "primary-container": "#0abc56",
+                    "background": "#060e20",
+                    "secondary": "#d9e3f6",
+                    "on-tertiary-fixed": "#003f43",
+                    "secondary-dim": "#cbd5e8",
+                    "on-secondary-container": "#c7d1e4",
+                    "outline": "#6d758c",
+                    "secondary-fixed-dim": "#cbd5e8",
+                    "primary": "#6bff8f",
+                    "surface-dim": "#060e20",
+                    "secondary-fixed": "#d9e3f6",
+                    "error-container": "#b92902",
+                    "tertiary-fixed-dim": "#00deea",
+                    "surface-variant": "#192540",
+                    "tertiary": "#88f6ff",
+                    "inverse-surface": "#faf8ff"
+                },
+                fontFamily: {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Inter"],
+                    "label": ["Manrope"]
+                },
+                borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+            },
+        },
+    }
+</script>
+<style>
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .filled {
+        font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+</style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary">
+
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-[#060e20]/80 backdrop-blur-xl">
+<div class="flex justify-between items-center px-8 h-20 max-w-full mx-auto">
+<a href="index.html" class="text-2xl font-black text-[#6bff8f] italic tracking-tighter font-['Plus_Jakarta_Sans']">VresParea</a>
+<div class="flex items-center space-x-6">
+<a class="bg-primary text-on-primary px-5 py-2.5 rounded-full font-['Plus_Jakarta_Sans'] font-bold tracking-tight hidden md:inline-flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-lg">phone_iphone</span> Get it for iOS
+</a>
+<a class="bg-primary text-on-primary px-5 py-2.5 rounded-full font-['Plus_Jakarta_Sans'] font-bold tracking-tight hidden md:inline-flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-lg">android</span> Get it for Android
+</a>
+</div>
+</div>
+</nav>
+
+<main class="min-h-screen flex items-center justify-center pt-20 px-8 py-16">
+<div class="max-w-lg w-full text-center">
+
+    <!-- Success icon -->
+    <div class="w-24 h-24 rounded-3xl bg-primary/10 flex items-center justify-center mx-auto mb-8">
+        <span class="material-symbols-outlined filled text-primary text-6xl">check_circle</span>
+    </div>
+
+    <h1 class="text-4xl md:text-5xl font-headline font-extrabold text-white mb-4 tracking-tight">
+        Email Confirmed!
+    </h1>
+    <p class="text-on-surface-variant text-lg max-w-sm mx-auto mb-10 leading-relaxed">
+        Your VresParea account is now active. Open the app on your phone to complete your profile and start playing.
+    </p>
+
+    <!-- Open app deep link button -->
+    <a href="vresparea://signin"
+       class="inline-flex items-center gap-2 bg-primary text-on-primary px-8 py-4 rounded-full font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-lg hover:scale-105 transition-transform">
+        <span class="material-symbols-outlined text-xl">phone_iphone</span>
+        Open VresParea App
+    </a>
+
+    <!-- What's next -->
+    <div class="mt-12 bg-surface-container-low rounded-3xl p-8 text-left">
+        <p class="text-xs font-label font-bold text-on-surface-variant uppercase tracking-widest mb-6">What's next</p>
+        <div class="space-y-5">
+            <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center flex-shrink-0">
+                    <span class="material-symbols-outlined text-primary text-xl">person</span>
+                </div>
+                <span class="text-on-surface-variant text-sm leading-snug">Sign in and complete your athlete profile</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center flex-shrink-0">
+                    <span class="material-symbols-outlined text-primary text-xl">sports_soccer</span>
+                </div>
+                <span class="text-on-surface-variant text-sm leading-snug">Browse games near you and join one</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center flex-shrink-0">
+                    <span class="material-symbols-outlined text-primary text-xl">trophy</span>
+                </div>
+                <span class="text-on-surface-variant text-sm leading-snug">Join or create a tournament</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Desktop fallback -->
+    <p class="mt-8 text-on-surface-variant/50 text-sm">
+        On a desktop? Download the app from our
+        <a href="index.html" class="text-primary hover:underline">home page</a>
+        and sign in there.
+    </p>
+
+</div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-surface-container-low border-t border-[#141f38]">
+<div class="max-w-7xl mx-auto px-8 pt-16 pb-8">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+<!-- Brand Column -->
+<div class="md:col-span-5">
+<a href="index.html" class="text-2xl font-black text-primary italic tracking-tighter font-headline inline-block mb-4">VresParea</a>
+<p class="text-on-surface-variant text-sm leading-relaxed max-w-xs mb-6">Connecting people through the love of sports. Find, organize, and play anywhere, anytime.</p>
+<a href="https://www.instagram.com/vres_parea/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-surface-container-high hover:bg-primary/10 transition-colors group">
+<svg class="w-5 h-5 text-on-surface-variant group-hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+</a>
+</div>
+<!-- Legal Column -->
+<div class="md:col-span-3">
+<h5 class="text-white font-headline font-bold text-sm uppercase tracking-wider mb-5">Legal</h5>
+<ul class="space-y-3">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="privacy.html">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="terms.html">Terms of Service</a></li>
+</ul>
+</div>
+<!-- Contact Column -->
+<div class="md:col-span-4">
+<h5 class="text-white font-headline font-bold text-sm uppercase tracking-wider mb-5">Contact</h5>
+<ul class="space-y-3">
+<li class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-base text-primary">mail</span>
+<a href="mailto:vresparea@gmail.com" class="hover:text-primary transition-colors">vresparea@gmail.com</a>
+</li>
+<li class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-base text-primary">language</span>
+<span>vresparea.gr</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Bottom Bar -->
+<div class="pt-8 border-t border-[#141f38] flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-on-surface-variant/60 text-xs">&copy; 2026 VresParea. All rights reserved.</p>
+<p class="text-on-surface-variant/40 text-xs">Made with <span class="text-primary">&#9679;</span> in Greece</p>
+</div>
+</div>
+</footer>
+
+</body>
+</html>
