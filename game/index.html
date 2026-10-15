@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Join a Game — VresParea</title>
+<meta name="description" content="You've been invited to a pickup game on VresParea. Open it in the app to see the details and join."/>
+<meta property="og:title" content="Join this game on VresParea"/>
+<meta property="og:description" content="Find players, start games, and keep the group moving."/>
+<meta name="robots" content="noindex"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    "surface": "#060e20",
+                    "surface-container-low": "#091328",
+                    "surface-container-high": "#141f38",
+                    "on-surface": "#dee5ff",
+                    "on-surface-variant": "#a3aac4",
+                    "outline-variant": "#40485d",
+                    "primary": "#6bff8f",
+                    "on-primary": "#005f28",
+                },
+                fontFamily: { "headline": ["Plus Jakarta Sans"], "body": ["Inter"] },
+            },
+        },
+    }
+</script>
+<style>
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    [hidden] { display: none !important; }
+</style>
+</head>
+<body class="bg-surface text-on-surface font-body">
+
+<main class="min-h-screen flex items-center justify-center px-6 py-16">
+<div class="text-center max-w-md w-full mx-auto">
+
+    <a href="/" class="text-2xl font-black text-primary italic tracking-tighter font-headline inline-block mb-10">VresParea</a>
+
+    <div class="w-20 h-20 rounded-3xl bg-surface-container-high flex items-center justify-center mx-auto mb-8">
+        <span class="material-symbols-outlined text-primary text-5xl">sports_soccer</span>
+    </div>
+
+    <!-- Valid link -->
+    <div id="valid">
+        <h1 class="text-3xl font-headline font-extrabold text-white mb-4">You're invited to a game</h1>
+        <p class="text-on-surface-variant text-lg mb-10 leading-relaxed">
+            Open it in the VresParea app to see who's playing, when and where, and grab a spot.
+        </p>
+
+        <div class="flex flex-col gap-3">
+            <a id="open-app" href="#" class="inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-6 py-4 rounded-full font-headline font-bold text-lg">
+                <span class="material-symbols-outlined">open_in_new</span> Open in VresParea
+            </a>
+            <a id="play-link" href="#" hidden class="inline-flex items-center justify-center gap-2 bg-surface-container-high text-white px-6 py-4 rounded-full font-headline font-bold">
+                <span class="material-symbols-outlined">android</span> Get it on Google Play
+            </a>
+        </div>
+
+        <p id="ios-note" hidden class="text-on-surface-variant text-sm mt-6 leading-relaxed">
+            The iPhone app is coming soon. If you already have it installed, tap “Open in VresParea”.
+        </p>
+        <p id="desktop-note" hidden class="text-on-surface-variant text-sm mt-6 leading-relaxed">
+            Open this link on your phone to see the game in the app.
+        </p>
+    </div>
+
+    <!-- Broken / incomplete link -->
+    <div id="invalid" hidden>
+        <h1 class="text-3xl font-headline font-extrabold text-white mb-4">This link looks incomplete</h1>
+        <p class="text-on-surface-variant text-lg mb-10 leading-relaxed">
+            Ask the person who shared it to send the game again, or find games near you in the app.
+        </p>
+        <a id="play-link-invalid" href="#" class="inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-6 py-4 rounded-full font-headline font-bold">
+            <span class="material-symbols-outlined">android</span> Get VresParea on Google Play
+        </a>
+    </div>
+
+    <div class="mt-12 flex items-center justify-center gap-6">
+        <a href="/privacy.html" class="text-on-surface-variant hover:text-primary transition-colors text-sm">Privacy</a>
+        <span class="text-outline-variant text-sm">·</span>
+        <a href="/terms.html" class="text-on-surface-variant hover:text-primary transition-colors text-sm">Terms</a>
+        <span class="text-outline-variant text-sm">·</span>
+        <a href="mailto:vresparea@gmail.com" class="text-on-surface-variant hover:text-primary transition-colors text-sm">Contact</a>
+    </div>
+</div>
+</main>
+
+<script src="/app-links.js"></script>
+<script>
+(function () {
+    var V = window.VresParea;
+    var id = V.param('id');
+    V.setHref('play-link-invalid', V.playUrl);
+    if (!V.isGameId(id)) {
+        V.hide('valid');
+        V.show('invalid');
+        return;
+    }
+    var appUrl = V.openAppUrl('game/' + id);
+    V.setHref('open-app', appUrl);
+    V.applyPlatform();
+    // On Android, try the app right away; the button stays as a fallback.
+    if (V.platform === 'android') {
+        window.location.href = appUrl;
+    }
+})();
+</script>
+</body>
+</html>
